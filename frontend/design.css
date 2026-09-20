@@ -4,7 +4,9 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
-
+html{
+    scroll-behavior: smooth;
+}
 .portfolio-body {
     min-height: 100vh;
     background: #f3f3f3;
@@ -12,11 +14,11 @@
 
 /*======================== HEADER ==========================*/
 .portfolio-header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 2;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 20;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -84,6 +86,7 @@
 .portfolio-hero {
     position: relative;
     min-height: 100vh;
+    padding-top: 120px;
     background-image: url("asset/konoha.png");
     background-size: cover;
     background-position: center;
@@ -157,11 +160,24 @@
 }
 
 /*======================== SKILL ==========================*/
+.portfolio-skills{
+    height: 100vh;
+    background-color: black;
+}
 
+.portfolio-skills h1{
+    text-align: center;
+    padding: 40px;
+    font-size: 60px;
+    background: linear-gradient(135deg, #6403a0fb,#03b8dc, #02d1fbe6);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
 /*======================== PROJECT ==========================*/
 .portfolio-project {
     min-height: 100vh;
-    background-color: rgb(237, 234, 251);
+    background-color: black;
 }
 
 .project-header {
@@ -169,8 +185,13 @@
 }
 
 .project-header h1 {
-    padding: 40px;
     font-size: 50px;
+    background: linear-gradient(135deg, #6403a0fb,#03b8dc, #02d1fbe6);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-align: center;
+    padding: 50px;
 }
 
 .card-grid {
@@ -182,14 +203,14 @@
 
 .card:hover{
     transform: translateY(-20px);
-    box-shadow: 2px 8px 30px rgba(0, 0, 0, 0.8);
+    box-shadow: 0px 5px 70px rgba(2, 80, 248, 0.993);
 }
 
 .card {
     width: 370px;
     background: white;
     border: none;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.8);
+    box-shadow: 0px 5px 50px rgba(2, 80, 248, 0.993);
     border-radius: 10px;
     transition: all 0.3s ease, box-shadow 0.3s ease;
 }
@@ -222,10 +243,60 @@
 
 /*======================== ABOUT ==========================*/
 .portfolio-about {
-    min-height: 250px;
+    height: 100vh;
     background: #ffffff;
+    background-color: black;
 }
 
+.portfolio-about h1{
+    text-align: center;
+    padding: 40px;
+    font-size: 60px;
+    background: linear-gradient(135deg, #6403a0fb,#03b8dc, #02d1fbe6);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.about-div{
+    display: flex;
+}
+
+.about-aside img{
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    box-shadow: 0px 5px 40px rgba(2, 80, 248, 0.993);
+}
+.about-text{
+    flex: 3;
+    padding: 40px;
+    margin-left: 100px;
+}
+
+.about-aside{
+    flex: 1;
+    padding: 50px;
+    margin-right: 100px;
+}
+
+.about-text h3{
+    font-size: 50px;
+    background: linear-gradient(135deg, #6403a0fb,#03b8dc, #02d1fbe6);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.about-text h2{
+    font-size: 40px;
+    color: white;
+}
+
+.about-text p{
+    color: rgb(249, 240, 240);
+    width: 70%;
+}
 /*======================== CONTACT ==========================*/
 .portfolio-contact {
     min-height: 250px;
@@ -254,7 +325,7 @@ marquee{
 }
 
 /*======================== FOOTER ==========================*/
-.portfolio-footer {
+.portfolio-footer{
     text-align: center;
     height: 70px;
     background-color: whitesmoke;
